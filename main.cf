@@ -293,7 +293,7 @@ unknown_local_recipient_reject_code = 550
 #mynetworks = 168.100.3.0/28, 127.0.0.0/8
 #mynetworks = $config_directory/mynetworks
 #mynetworks = hash:/etc/postfix/network_table
-mynetworks = 127.0.0.0/8
+mynetworks = 127.0.0.0/8, 192.168.11.57
 
 # The relay_domains parameter restricts what destinations this system will
 # relay mail to.  See the smtpd_relay_restrictions and
@@ -693,3 +693,4 @@ sample_directory = /usr/share/doc/postfix/samples
 #
 readme_directory = /usr/share/doc/postfix/README_FILES
 inet_protocols = ipv4
+#smtpd_relay_restrictions = permit_mynetworks
