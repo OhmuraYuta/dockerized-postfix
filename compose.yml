@@ -1,5 +1,9 @@
 services:
   postfix:
     build: .
+    volumes:
+      - ./:/tmp
     tty: true
     stdin_open: true
+    ports:
+      - "25:25"
