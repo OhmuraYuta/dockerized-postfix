@@ -7,3 +7,4 @@ services:
     stdin_open: true
     ports:
       - "25:25"
+    network_mode: host
