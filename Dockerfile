@@ -9,7 +9,7 @@ RUN apt-get install -y postfix mailutils
 RUN apt-get install -y sasl2-bin
 RUN apt-get install -y telnet dnsutils
 RUN apt-get install -y rsyslog
-COPY saslauthd /etc/default/saslauthd
+#COPY saslauthd /etc/default/saslauthd
 COPY main.cf /etc/postfix/main.cf
 COPY resolv.conf /var/spool/postfix/etc/resolv.conf
 CMD ["postfix", "start-fg"]
